@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Включен: яркий золотистый/янтарный -->
+    <item android:color="#FFB74D" android:state_checked="true" />
+    <!-- Выключен: аккуратный серый -->
+    <item android:color="#8E9099" android:state_checked="false" />
+</selector>

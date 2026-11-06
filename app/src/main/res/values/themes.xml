@@ -1,0 +1,69 @@
+<resources>
+    <style name="Theme.AntiGulag" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Системные бары -->
+        <item name="android:statusBarColor">#1A1C20</item>
+        <item name="android:navigationBarColor">#131316</item>
+        <item name="android:windowBackground">#131316</item>
+
+        <!-- Цветовая палитра: холодный графит и фирменный янтарь -->
+        <item name="colorPrimary">#FFB74D</item>
+        <item name="colorOnPrimary">#191B20</item>
+        <item name="colorSecondary">#FFB74D</item>
+        <item name="colorOnSecondary">#191B20</item>
+        <item name="colorSecondaryContainer">#2B2E38</item>
+        <item name="colorOnSecondaryContainer">#FFB74D</item>
+
+        <!-- Поверхности без паразитных коричневых оттенков -->
+        <item name="colorSurface">#1E2026</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="colorSurfaceVariant">#242731</item>
+        <item name="colorOnSurfaceVariant">#9E9E9E</item>
+
+        <!-- Отключаем наложение цвета elevation (убирает коричневый налет) -->
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="elevationOverlayColor">@android:color/transparent</item>
+
+        <!-- Контуры: нейтральный серый вместо дефолтного фиолетового -->
+        <item name="colorOutline">#7A7E8B</item>
+        <item name="colorOutlineVariant">#2E333F</item>
+
+        <!-- Стилизация компонентов -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.AntiGulag.Dialog</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.AntiGulag.BottomSheet</item>
+        <item name="materialSwitchStyle">@style/Widget.AntiGulag.Switch</item>
+        <item name="radioButtonStyle">@style/Widget.AntiGulag.RadioButton</item>
+    </style>
+
+    <!-- Стиль тумблера: исключает фиолетовые точки при анимации -->
+    <style name="Widget.AntiGulag.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbTint">@color/selector_switch_thumb</item>
+        <item name="trackTint">@color/selector_switch_track</item>
+        <item name="thumbIcon">@null</item>
+        <item name="thumbIconTint">@android:color/transparent</item>
+    </style>
+
+    <!-- Стиль радиокнопки: янтарный при выборе -->
+    <style name="Widget.AntiGulag.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/selector_radio_amber</item>
+    </style>
+
+    <!-- Диалоговые окна -->
+    <style name="ThemeOverlay.AntiGulag.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">#1E2026</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="colorPrimary">#FFB74D</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.AntiGulag.Dialog</item>
+    </style>
+
+    <style name="ShapeAppearance.AntiGulag.Dialog" parent="">
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <!-- Шторка BottomSheet -->
+    <style name="ThemeOverlay.AntiGulag.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="colorSurface">#191B20</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="elevationOverlayEnabled">false</item>
+    </style>
+</resources>

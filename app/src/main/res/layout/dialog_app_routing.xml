@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1D22"
+    android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+    <View
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:background="#37393E" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Приложения для туннеля"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCloseAppRouting"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="Готово"
+            android:textSize="12sp"
+            app:cornerRadius="19dp" />
+    </LinearLayout>
+
+    <!-- Переключатель режима -->
+    <RadioGroup
+        android:id="@+id/rgAppMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="6dp"
+        android:background="#23262D"
+        android:padding="8dp">
+
+        <RadioButton
+            android:id="@+id/rbModeAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Все приложения (по умолчанию)"
+            android:textColor="#E3E2E6"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rbModeProxyOnly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Только выбранные (Прокси)"
+            android:textColor="#E3E2E6"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/rbModeBypass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Обходить выбранные (Прямое подключение)"
+            android:textColor="#E3E2E6"
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <!-- Поле поиска -->
+    <LinearLayout
+        android:id="@+id/llSearchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#23262D"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="Поиск"
+            android:src="@android:drawable/ic_menu_search"
+            android:tint="#8E9099" />
+
+        <EditText
+            android:id="@+id/etSearchApps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:background="@null"
+            android:hint="Поиск по названию приложения..."
+            android:imeOptions="actionDone"
+            android:inputType="textFilter"
+            android:maxLines="1"
+            android:textColor="#E3E2E6"
+            android:textColorHint="#8E9099"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbLoadingApps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvApps"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

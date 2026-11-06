@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Фон: темный металлик -->
+    <path
+        android:fillColor="#121316"
+        android:pathData="M0,0h108v108h-108z" />
+    
+    <!-- Внешний щит / периметр -->
+    <path
+        android:fillColor="#252830"
+        android:pathData="M54,14 L86,28 L86,58 C86,76 72,91 54,96 C36,91 22,76 22,58 L22,28 Z" />
+
+    <!-- Красная звезда / лучи (символика Гойды / свободы) -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M54,26 L62,44 L81,42 L67,54 L73,72 L54,61 L35,72 L41,54 L27,42 L46,44 Z" />
+
+    <!-- Разорванное звено цепи поверх -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,48 C41,48 38,51 38,54 C38,57 41,60 44,60 L48,60 L48,64 L44,64 C36,64 34,58 34,54 C34,50 36,44 44,44 L50,44 L50,48 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M64,48 C67,48 70,51 70,54 C70,57 67,60 64,60 L60,60 L60,64 L64,64 C72,64 74,58 74,54 C74,50 72,44 64,44 L58,44 L58,48 Z" />
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M51,52 L57,56 L51,60 Z" />
+</vector>

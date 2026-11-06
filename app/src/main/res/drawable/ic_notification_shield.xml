@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Контур щита -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,1 L3,5 v6 c0,5.55 3.84,10.74 9,12 c5.16,-1.26 9,-6.45 9,-12 V5 L12,1 z M12,3.18 L19,6.3 v4.7 c0,4.52 -3.03,8.74 -7,9.88 c-3.97,-1.14 -7,-5.36 -7,-9.88 V6.3 L12,3.18 z" />
+
+    <!-- Внутренняя звезда -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,7 l1.4,3.1 3.4,0.4 -2.5,2.4 0.6,3.4 -2.9,-1.6 -2.9,1.6 0.6,-3.4 -2.5,-2.4 3.4,-0.4 z" />
+</vector>
